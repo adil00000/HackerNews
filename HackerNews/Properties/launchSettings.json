@@ -1,0 +1,14 @@
+{
+  "profiles": {
+    "HackerNews": {
+      "commandName": "Project",
+      "commandLineArgs": "--posts 2",
+      "console": "externalTerminal"
+    },
+    "Docker": {
+      "commandName": "Docker",
+      "commandLineArgs": "--posts 2",
+      "console": "externalTerminal"
+    }
+  }
+}
