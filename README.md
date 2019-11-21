@@ -19,4 +19,4 @@ HackerNewsTest
 - Carrys oout a set of MSTests on the validation class in HackerNewsLibrary
 
 There is a Docker file created for a Windows image
-Unfortualty docker debug can't accept a console input STDIN
+Unfortunately docker debug can't accept a console input STDIN
