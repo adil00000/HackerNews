@@ -65,89 +65,101 @@ namespace HackerNews
             int Comments;
             int Rank;
 
-            PostLogic postLogic = new PostLogic();
+            try 
+            { 
 
-            Console.WriteLine("Number of posts {0}", Program.Posts);
+                PostLogic postLogic = new PostLogic();
 
-            for (int i = 1; i <= Program.Posts; i++)
-            {
-                while (true)
+                Console.WriteLine("Number of posts {0}", Program.Posts);
+
+                for (int i = 1; i <= Program.Posts; i++)
                 {
-                    Console.WriteLine("Please enter the title for Post No {0}", i);
-                    Title = Console.ReadLine();
-                    if (!ValidatePostInput.ValidateTitle(Title, out error))
-                        Console.WriteLine(error);
-                    else
-                        break;
+                    while (true)
+                    {
+                        Console.WriteLine("Please enter the title for Post No {0}", i);
+                        Title = Console.ReadLine();
+                        if (!ValidatePostInput.ValidateTitle(Title, out error))
+                            Console.WriteLine(error);
+                        else
+                            break;
+                    }
+
+                    while (true)
+                    {
+                        Console.WriteLine("Please enter the uri for Post No {0}", i);
+                        uri = Console.ReadLine();
+                        if (!ValidatePostInput.ValidateUri(uri, out error))
+                            Console.WriteLine(error);
+                        else
+                            break;
+                    }
+
+                    while (true)
+                    {
+                        Console.WriteLine("Please enter the Author for Post No {0}", i);
+                        Author = Console.ReadLine();
+                        if (!ValidatePostInput.ValidateAuthor(Author, out error))
+                            Console.WriteLine(error);
+                        else
+                            break;
+                    }
+
+                    while (true)
+                    {
+                        Console.WriteLine("Please enter the Points for Post No {0}", i);
+
+                        if (!ValidatePostInput.ValidatePoints(Console.ReadLine(), out Points, out error))
+                            Console.WriteLine(error);
+                        else
+                            break;
+                    }
+
+
+                    while (true)
+                    {
+                        Console.WriteLine("Please enter the Comments for Post No {0}", i);
+
+                        if (!ValidatePostInput.ValidateComments(Console.ReadLine(), out Comments, out error))
+                            Console.WriteLine(error);
+                        else
+                            break;
+
+                    }
+
+                    while (true)
+                    {
+                        Console.WriteLine("Please enter the Rank for Post No {0}", i);
+
+                        if (!ValidatePostInput.ValidateRank(Console.ReadLine(), out Rank, out error))
+                            Console.WriteLine(error);
+                        else
+                            break;
+                    }
+
+                    Posts post = new Posts()
+                    {
+                        title = Title,
+                        uri = uri,
+                        author = Author,
+                        points = Points,
+                        comments = Comments,
+                        rank = Rank
+                    };
+
+                    postLogic.CreateList(post);
+
                 }
+                Console.WriteLine("JSON post is as follows...");
+                Console.WriteLine(postLogic.CreateJSON());
 
-                while (true)
-                {
-                    Console.WriteLine("Please enter the uri for Post No {0}", i);
-                    uri = Console.ReadLine();
-                    if (!ValidatePostInput.ValidateUri(uri, out error))
-                        Console.WriteLine(error);
-                    else
-                        break;
-                }
-
-                while (true)
-                {
-                    Console.WriteLine("Please enter the Author for Post No {0}", i);
-                    Author = Console.ReadLine();
-                    if(!ValidatePostInput.ValidateAuthor(Author, out error))
-                         Console.WriteLine(error);
-                    else
-                        break;
-                }
-
-                while (true)
-                {
-                    Console.WriteLine("Please enter the Points for Post No {0}", i);
-
-                    if (!ValidatePostInput.ValidatePoints(Console.ReadLine(), out Points, out error))
-                        Console.WriteLine(error);
-                    else
-                        break;
-                }
-
-
-                while (true)
-                {
-                    Console.WriteLine("Please enter the Comments for Post No {0}", i);
-
-                    if (!ValidatePostInput.ValidateComments(Console.ReadLine(), out Comments, out error))
-                        Console.WriteLine(error);
-                    else
-                        break;
-
-                }
-
-                while (true)
-                {
-                    Console.WriteLine("Please enter the Rank for Post No {0}", i);
-
-                    if(!ValidatePostInput.ValidateRank(Console.ReadLine(), out Rank, out error))
-                        Console.WriteLine(error);
-                    else
-                        break;
-                }
-
-                Posts post = new Posts()
-                {
-                    title = Title,
-                    uri = uri,
-                    author = Author,
-                    points = Points,
-                    comments = Comments,
-                    rank = Rank
-                };
-
-                postLogic.CreateList(post);
 
             }
-            Console.WriteLine("JSON post is as follows...");
-            Console.WriteLine(postLogic.CreateJSON());
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
+            Console.ReadKey();
         }
     }
 }

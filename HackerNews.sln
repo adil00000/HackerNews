@@ -7,9 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HackerNews", "HackerNews\Ha
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HackerNewsLibrary", "HackerNewsLibrary\HackerNewsLibrary.csproj", "{E4F2AEA0-D1D3-4890-9C02-A2AAA6E19AAA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HackerNewsTest", "HackerNewsTest\HackerNewsTest.csproj", "{CA0BE1A2-E90B-45AF-A4D9-81950940DA53}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HackerNewsTest", "HackerNewsTest\HackerNewsTest.csproj", "{CA0BE1A2-E90B-45AF-A4D9-81950940DA53}"
 EndProject
-Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{05A3D889-7481-4F6F-A0D6-B872DE9C0129}"
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{898649EF-23D2-42F2-A263-1D28CF09747A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,10 @@ Global
 		{CA0BE1A2-E90B-45AF-A4D9-81950940DA53}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CA0BE1A2-E90B-45AF-A4D9-81950940DA53}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CA0BE1A2-E90B-45AF-A4D9-81950940DA53}.Release|Any CPU.Build.0 = Release|Any CPU
-		{05A3D889-7481-4F6F-A0D6-B872DE9C0129}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{05A3D889-7481-4F6F-A0D6-B872DE9C0129}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{05A3D889-7481-4F6F-A0D6-B872DE9C0129}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{05A3D889-7481-4F6F-A0D6-B872DE9C0129}.Release|Any CPU.Build.0 = Release|Any CPU
+		{898649EF-23D2-42F2-A263-1D28CF09747A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{898649EF-23D2-42F2-A263-1D28CF09747A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{898649EF-23D2-42F2-A263-1D28CF09747A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{898649EF-23D2-42F2-A263-1D28CF09747A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -4,6 +4,7 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.0</TargetFramework>
     <DockerDefaultTargetOS>Windows</DockerDefaultTargetOS>
+    <StartupObject>HackerNews.Program</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>

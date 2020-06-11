@@ -6,6 +6,19 @@ namespace HackerNewsTest
     [TestClass]
     public class ValidationTests
     {
+
+        [TestInitialize]
+        public void Initialize()
+        {
+
+        }
+
+        [TestCleanup]
+        public void CLeanUp()
+        {
+
+        }
+
         [TestMethod]
         public void ValidateInvalidUriTest()
         {

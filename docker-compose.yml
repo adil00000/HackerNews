@@ -5,4 +5,4 @@ services:
     image: ${DOCKER_REGISTRY-}hackernews
     build:
       context: .
-      dockerfile: HackerNews/Dockerfile
+      dockerfile: HackerNews\Dockerfile
